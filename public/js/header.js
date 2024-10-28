@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     case "/news":
       headerLinks[1].classList.add("currentPage");
       break;
-    case "/races":
+    case "/tracks":
       headerLinks[2].classList.add("currentPage");
       break;
     case "/drivers":

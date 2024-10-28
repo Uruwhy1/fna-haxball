@@ -3,7 +3,7 @@ body {
   margin: 0;
   padding: 0;
 
-  background-color: #f8f8f8;
+  background-color: var(--page-bg);
   color: #fff;
 
   width: 100vw;
@@ -11,6 +11,6 @@ body {
   height: 100%;
 
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   flex-direction: column;
 }

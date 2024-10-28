@@ -1,0 +1,128 @@
+header {
+  background-color: #303030;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.races-container {
+  width: 100vw;
+  margin: auto;
+  margin-bottom: 2rem;
+
+  display: grid;
+  gap: 4rem;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 375px);
+}
+
+.race {
+  --shadow-color: #808080;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding: 0.5rem;
+  box-shadow: -0.5rem 0.5rem 0px var(--shadow-color);
+  background-color: #ffffff;
+  color: #000;
+
+  transition: box-shadow 0.2s;
+
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    border: 4px solid red;
+    border-bottom: none;
+    border-left: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    left: 2%;
+    bottom: 1%;
+    z-index: -1;
+
+    width: calc(100% + 6px);
+    height: calc(100% + 6px);
+
+    border: 4px solid red;
+    border-bottom: none;
+    border-left: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+    --shadow-color: orange;
+
+    .driver {
+      font-weight: 600;
+    }
+  }
+  counter-reset: standings;
+}
+
+.race h1 {
+  text-align: center;
+}
+
+.race img {
+  height: 150px;
+}
+.driver {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 0.5rem;
+
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+
+  background-color: inherit;
+  --points-background: #e9e9e9;
+  &:nth-of-type(even) {
+    background-color: var(--page-bg);
+  }
+
+  &:first-of-type {
+    --points-background: gold;
+  }
+  &:nth-of-type(2) {
+    --points-background: silver;
+  }
+  &:nth-of-type(3) {
+    --points-background: #cd7f32;
+  }
+
+  &::before {
+    counter-increment: standings;
+    content: counter(standings) ".";
+  }
+}
+
+.driver .name {
+  margin-right: auto;
+}
+
+.driver .points {
+  background-color: var(--points-background);
+  font-weight: 800;
+
+  padding: 0.5rem;
+  border-radius: 10px;
+}
