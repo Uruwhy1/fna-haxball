@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+:root {
+  --radius-button: 2px;
+  --shorter-transition-duration: 0.15s;
+  --transition-duration: 0.3s;
+  --longer-transition-duration: 0.5s;
+
+  --hyperlink-color: rgb(68, 158, 255);
+
+  --form-page-bg: #151515;
+  --form-shadow: rgb(120, 120, 120);
+  --form-button: rgb(255, 56, 56);
+
+  --input-border: #ccc;
+  --focus-color: #007bff;
+}
