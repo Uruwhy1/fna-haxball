@@ -17,14 +17,18 @@ body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f8f8f8;
 
-  height: 100vh;
+  background-color: #f8f8f8;
+  color: #fff;
+
+  min-height: 100vh;
+  height: 100%;
 
   display: flex;
+  gap: 1rem;
   flex-direction: column;
 
-  background-image: url("./formula-1.jpg");
+  background-image: url("./images/formula-1.jpg");
   background-size: cover;
 }
 
@@ -35,7 +39,6 @@ header {
   align-items: center;
   gap: 2rem;
   padding: 1rem;
-  color: white;
 
   font-size: 1.1rem;
   font-weight: 500;
@@ -63,7 +66,7 @@ header {
 }
 
 .links a {
-  color: white;
+  color: inherit;
   text-decoration: none;
   padding: 0.75rem;
   border-radius: 5px;
@@ -96,8 +99,10 @@ main {
   flex-grow: 1;
 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
+  gap: 3rem;
 }
 
 main .container {
@@ -109,8 +114,6 @@ main .container {
 
   padding: 2rem;
 
-  height: 100%;
-  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -160,4 +163,106 @@ main .container {
       transform: translateY(-5px);
     }
   }
+}
+
+.standingsContainer {
+  width: 100%;
+  padding: 0 5%;
+  flex-grow: 1;
+
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: start;
+}
+
+.standingsContainer > div {
+  min-width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-shadow: 0.5rem 0.5rem var(--category);
+  &.f1 {
+    --category: var(--f1-color);
+  }
+  &.f2 {
+    --category: var(--f2-color);
+  }
+
+  > * {
+    width: 100%;
+  }
+
+  h3 {
+    background-color: #303030;
+    text-align: center;
+
+    padding: 1rem 0;
+  }
+}
+
+.standings {
+  background-color: #fff;
+  color: #000;
+
+  font-size: 1.2rem;
+
+  counter-reset: standings;
+}
+
+.category {
+  color: var(--category);
+}
+
+.driver {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  padding: 0.75rem 1.5rem;
+
+  --points-background: #e9e9e9;
+  &:nth-of-type(even) {
+    background-color: #ebeaea;
+    --points-background: rgb(249, 249, 249);
+  }
+
+  &:first-of-type {
+    --points-background: gold;
+  }
+  &:nth-of-type(2) {
+    --points-background: silver;
+  }
+  &:nth-of-type(3) {
+    --points-background: #cd7f32;
+  }
+
+  &::before {
+    counter-increment: standings;
+    content: counter(standings) ".";
+  }
+}
+
+.driver .flag {
+  margin-right: auto;
+}
+
+.driver .points {
+  background-color: var(--points-background);
+  font-weight: 800;
+
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+/* footer */
+
+footer {
+  padding: 0.25rem;
+
+  color: #fff;
+  background-color: #000;
 }
