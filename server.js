@@ -8,17 +8,23 @@ app.set("views", path.join(__dirname, "views"));
 
 const posts = [
   {
+    author: "Antonio Giovinazzi",
+    date: new Date(),
     title:
       "El regreso de Campi genera debate sobre el papel de la FIA en el control de carrera",
     image:
       "https://e0.365dm.com/22/07/2048x1152/skysports-michae-masi-f1_5833066.jpg?20220713114246",
   },
   {
+    date: new Date(),
     title: "Cano insinúa su retiro: 'Todavía me queda algo de fuego dentro'",
+    author: "Nikita Mazepin",
     image:
       "https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/manual/Hall%20of%20Fame%202024/GettyImages-55768339",
   },
   {
+    date: new Date(),
+    author: "Robert Kubica",
     title:
       "La impresionante actuación de Cano revive las esperanzas de Aston Martin para la temporada",
     image:

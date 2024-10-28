@@ -10,9 +10,12 @@ body {
 }
 
 main {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "carousel"
+    "second-section";
   align-items: center;
 }
 
@@ -46,6 +49,22 @@ main {
   }
 }
 
+.user-img {
+  background-color: rgb(199, 199, 199);
+  color: #000;
+  height: 100%;
+
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
+.title {
+  transition: color 0.15s;
+}
+.title:hover {
+  color: var(--hover-link);
+  cursor: pointer;
+}
 /* --------------------------------
       carousel cards
 -----------------------------------*/
@@ -60,8 +79,7 @@ main {
 
   position: relative;
   display: flex;
-  flex-direction: column;
-  justify-content: end;
+  align-items: end;
 
   transition: transform 1s ease-in-out;
   @media (prefers-reduced-motion) {
@@ -69,18 +87,43 @@ main {
   }
 }
 
-.title {
-  background-color: rgba(0, 0, 0, 0.756);
-  border-radius: 0 5px 5px 0;
+.main-card .info,
+.main-card .title {
+  background-color: rgba(1, 0, 0, 0.756);
 
   padding: 0.75rem 1.5rem;
   padding-right: 0;
+}
+
+.main-card .title {
+  border-radius: 0 5px 5px 0;
+  margin-right: auto;
 
   font-size: 2rem;
   font-weight: 700;
 
   max-width: 50%;
   text-wrap: balance;
+}
+
+.main-card .info {
+  border-radius: 5px 0 0 5px;
+  display: flex;
+  text-align: end;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+  }
+
+  .date {
+    color: #ccc;
+  }
 }
 
 /* ------------------------------------------------- */
@@ -113,4 +156,53 @@ main {
 
 .active {
   background-color: var(--dot-color);
+}
+
+/* ------------------------------
+      second section
+-------------------------------- */
+
+.second-section {
+  width: calc(100vw - (var(--page-padding) * 2));
+  margin: auto;
+
+  display: grid;
+  justify-content: center;
+  gap: 2rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+}
+
+.small-card {
+  max-width: 400px;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+
+  color: #000;
+
+  img {
+    border-radius: 5px;
+    margin-bottom: -0.25rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+
+    .title {
+      color: var(--hover-link);
+    }
+  }
+}
+
+.small-card .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  > div {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
 }

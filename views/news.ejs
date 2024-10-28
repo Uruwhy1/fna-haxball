@@ -10,7 +10,32 @@
     <% posts.forEach((post) => { %>
     <div class="main-card" style="background-image: url('<%= post.image %>')">
       <h1 class="title"><%= post.title %></h1>
+      <div class="info">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="user-img"
+          >
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+          </svg>
+          <p><%= post.author %></p>
+        </div>
+        <p class="date">
+          <%= post.date.toLocaleString('default', {day: 'numeric', weekday:
+          'long',month: 'long'}); %>
+        </p>
+      </div>
     </div>
+
     <% }) %>
   </div>
 
@@ -19,4 +44,37 @@
     <span class="dot" onclick="goToSlide(1)"></span>
     <span class="dot" onclick="goToSlide(2)"></span>
   </div>
+</div>
+<div class="second-section">
+  <% posts.forEach((post) => { %>
+  <div class="small-card">
+    <img src="<%= post.image %>" alt="" />
+    <div class="info">
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="user-img"
+        >
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </svg>
+
+        <p class="author"><%= post.author %></p>
+      </div>
+      <p>
+        <%= post.date.toLocaleString('default', {day: 'numeric', weekday:
+        'long',month: 'long'}); %>
+      </p>
+    </div>
+    <h3 class="title"><%= post.title %></h3>
+  </div>
+  <% }) %>
 </div>
