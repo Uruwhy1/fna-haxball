@@ -16,4 +16,7 @@
 
   --f1-color: rgb(255, 129, 129);
   --f2-color: rgb(130, 130, 255);
+
+  --dot-color: rgb(246, 246, 246);
+  --page-padding: 0.5rem;
 }

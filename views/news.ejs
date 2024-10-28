@@ -1,1 +1,22 @@
-d
+<link rel="stylesheet" href="styles/news.css" />
+<script src="js/carousel.js"></script>
+
+<div class="carousel">
+  <div
+    class="card-container"
+    id="cardContainer"
+    style="transform: translateX(0)"
+  >
+    <% posts.forEach((post) => { %>
+    <div class="main-card" style="background-image: url('<%= post.image %>')">
+      <h1 class="title"><%= post.title %></h1>
+    </div>
+    <% }) %>
+  </div>
+
+  <div class="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+  </div>
+</div>
