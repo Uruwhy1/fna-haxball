@@ -1,0 +1,71 @@
+header {
+  background-color: #303030;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.filter {
+  padding: 0.5rem;
+}
+
+table {
+  border-collapse: collapse;
+  background-color: #00000083;
+}
+
+thead {
+  background-color: #303030;
+}
+
+th,
+td {
+  padding-left: 0.5rem;
+  height: 45px;
+}
+
+th {
+  width: 200px;
+
+  cursor: pointer;
+  position: relative;
+
+  &.small {
+    width: 150px;
+  }
+}
+
+th:hover:after {
+  content: "▼";
+  position: absolute;
+  right: 10px;
+  display: none;
+}
+th[data-order="asc"]:hover::after {
+  content: "▲";
+  display: inline;
+
+  cursor: pointer;
+}
+th[data-order="desc"]:hover::after {
+  display: inline;
+  cursor: pointer;
+}
+
+tr {
+  &:nth-of-type(even) {
+    background-color: #23232383;
+  }
+}
+
+.text {
+  text-align: start;
+}
+.number {
+  text-align: center;
+}

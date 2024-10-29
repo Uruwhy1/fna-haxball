@@ -137,6 +137,41 @@ const races = [
     ],
   },
 ];
+const drivers = [
+  {
+    id: 1,
+    name: "Lewis Hamilton",
+    team: "Mercedes",
+    country: "United Kingdom",
+    wins: 103,
+    points: 4500,
+    podiums: 196,
+    top10: 270,
+    value: 70,
+  },
+  {
+    id: 2,
+    name: "Max Verstappen",
+    team: "Red Bull Racing",
+    country: "Netherlands",
+    wins: 51,
+    points: 3000,
+    podiums: 95,
+    top10: 140,
+    value: 50,
+  },
+  {
+    id: 3,
+    name: "Charles Leclerc",
+    team: "Ferrari",
+    country: "Monaco",
+    wins: 5,
+    points: 1300,
+    podiums: 27,
+    top10: 85,
+    value: 15,
+  },
+];
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(ejsLayouts);
@@ -152,6 +187,9 @@ app.get("/news", (req, res) => {
 });
 app.get("/tracks", (req, res) => {
   res.render("tracks", { title: "Carreras", races: races });
+});
+app.get("/drivers", (req, res) => {
+  res.render("drivers", { title: "Pilotos", drivers: drivers });
 });
 
 const PORT = process.env.PORT || 3000;

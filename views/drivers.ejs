@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="styles/drivers.css" />
+<script defer src="js/table.js"></script>
+
+<div class="filter-container">
+  <input
+    type="text"
+    id="filterInput"
+    class="filter"
+    placeholder="Search by driver name..."
+  />
+</div>
+<table class="drivers-table">
+  <thead>
+    <tr>
+      <th class="text">Name</th>
+      <th data-column="team" data-order="asc" class="text">Team</th>
+      <th data-column="country" data-order="asc" class="text">Country</th>
+      <th data-column="wins" data-order="asc" class="small number">Wins</th>
+      <th data-column="points" data-order="asc" class="small number">Points</th>
+      <th data-column="podiums" data-order="asc" class="small number">
+        Podiums
+      </th>
+      <th data-column="top10" data-order="asc" class="small number">Top 10</th>
+      <th data-column="value" data-order="asc" class="small number">Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% drivers.forEach(driver => { %>
+    <tr class="driver-row">
+      <td class="text"><%= driver.name %></td>
+      <td class="text"><%= driver.team %></td>
+      <td class="text"><%= driver.country %></td>
+      <td class="number"><%= driver.wins || 0 %></td>
+      <td class="number"><%= driver.points || 0 %></td>
+      <td class="number"><%= driver.podiums || 0 %></td>
+      <td class="number"><%= driver.top10 || 0 %></td>
+      <td class="number">$<%= driver.value || 'N/A' %>M</td>
+    </tr>
+    <% }); %>
+  </tbody>
+</table>
