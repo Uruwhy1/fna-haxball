@@ -34,23 +34,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => {
-  const filterInput = document.getElementById("filterInput");
-  const tableBody = document.querySelector(".drivers-table tbody");
-  const rows = Array.from(tableBody.querySelectorAll("tr"));
-
-  // clear on page load (otherwise there might be text on it but it will not be filtering based on it :V)
-  filterInput.textContent = "";
-
-  filterInput.addEventListener("input", (e) => {
-    const searchText = e.target.value.toLowerCase();
-
-    rows.forEach((row) => {
-      const name = row
-        .querySelector("td:first-child")
-        .textContent.toLowerCase();
-      row.style.display = name.includes(searchText) ? "" : "none";
-    });
-  });
-});
