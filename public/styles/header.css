@@ -76,3 +76,8 @@ header {
     --hover-before: red;
   }
 }
+
+.inactive {
+  pointer-events: none;
+  color: gray !important;
+}
