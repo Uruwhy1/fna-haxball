@@ -171,6 +171,10 @@ main {
   gap: 2rem;
 
   grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+
+  > a {
+    text-decoration: none;
+  }
 }
 
 .small-card {

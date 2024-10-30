@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/styles/individualArticle.css" />
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script defer src="/js/individualArticle.js"></script>
+
+<div class="image">
+  <img src="<%= post.image %>" alt="" />
+</div>
+<div class="content">
+  <div class="info">
+    <h1 class="title"><%= post.title %></h1>
+    <div>
+      <p class="author"><%= post.author %></p>
+      <p class="date">
+        <%= post.date.toLocaleDateString(undefined, { year: "numeric", month:
+        "short", day: "numeric" }) %>
+      </p>
+    </div>
+  </div>
+
+  <div class="markdown"><%- post.content %></div>
+</div>

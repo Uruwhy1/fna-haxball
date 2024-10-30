@@ -25,6 +25,10 @@ header {
 
   cursor: pointer;
   text-decoration: none;
+
+  &:hover {
+    color: orange;
+  }
 }
 
 .search {
