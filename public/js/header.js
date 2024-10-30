@@ -22,3 +22,28 @@ document.addEventListener("DOMContentLoaded", () => {
       break;
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.querySelector(".links");
+  const links = document.querySelectorAll(".links a");
+
+  function moveIndicator(target) {
+    const { left, width } = target.getBoundingClientRect();
+    const parentLeft = target.parentNode.getBoundingClientRect().left;
+
+    container.style.setProperty("--opacity", "1");
+    container.style.setProperty("--width", width);
+    container.style.setProperty(
+      "--translate",
+      `translateX(${left - parentLeft}px)`
+    );
+  }
+
+  links.forEach((link) => {
+    link.addEventListener("mouseenter", (e) => moveIndicator(e.target));
+  });
+
+  document.querySelector(".links").addEventListener("mouseleave", () => {
+    container.style.setProperty("--opacity", "0");
+  });
+});
