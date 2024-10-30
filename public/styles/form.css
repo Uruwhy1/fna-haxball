@@ -100,6 +100,7 @@ main input {
 
 button {
   background: var(--form-button);
+  margin-bottom: 0.5rem;
 
   color: #fff;
   padding: 12px;
@@ -141,12 +142,12 @@ p {
   margin-top: 0.5rem;
   font-weight: 500;
 }
-a {
+main a {
   margin-left: 3px;
   text-decoration: none;
   color: var(--hyperlink-color);
 }
-a:hover {
+main a:hover {
   text-decoration: underline;
 }
 

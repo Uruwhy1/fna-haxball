@@ -1,10 +1,12 @@
 <link rel="stylesheet" href="/styles/form.css" />
+<script src="/js/form.js"></script>
+
 <div class="container">
   <div class="left log-in"></div>
   <div class="right">
     <h2>Log <span>In</span></h2>
     <form action="/login" method="POST" id="create">
-      <label for="email" focus>Email</label>
+      <label for="email" focus>Nombre de Usuario</label>
       <input
         type="email"
         id="email"
@@ -13,7 +15,7 @@
         autofocus
         required
       /><br />
-      <label for="password">Password</label>
+      <label for="password">Contraseña</label>
       <input
         type="password"
         id="password"
@@ -21,8 +23,8 @@
         placeholder=" "
         required
       />
-      <label id="error-message"></label>
       <button id="submit-button" type="submit">Log In</button>
+      <a href="" class="forgotten-password">Olvidaste tu contraseña?</a>
     </form>
   </div>
 </div>
