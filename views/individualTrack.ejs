@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/styles/individualTrack.css" />
+
+<div class="left">
+  <div class="track-info">
+    <img
+      src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png"
+      alt=""
+    />
+    <h1><%= race.name %></h1>
+  </div>
+</div>
+
+<div class="right">
+  <div class="positions">
+    <h2>Vueltas Rapidas</h2>
+    <% race.positions.forEach(driver => { %>
+    <div class="driver">
+      <p class="name"><%= driver.driver %></p>
+      <p class="points"><%= driver.laptime %></p>
+    </div>
+    <% }); %>
+  </div>
+</div>

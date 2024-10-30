@@ -34,7 +34,7 @@ main {
 
 table {
   border-collapse: collapse;
-  background-color: #00000083;
+  background-color: var(--table-item-bg);
 }
 
 thead {
@@ -73,7 +73,7 @@ th[data-order="desc"]:hover::after {
 
 tr {
   &:nth-of-type(even) {
-    background-color: #23232383;
+    background-color: var(--table-even-item-bg);
   }
 }
 

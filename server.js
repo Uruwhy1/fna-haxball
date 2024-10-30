@@ -43,6 +43,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
+      { driver: "Uruwhy", laptime: "35.324s" },
     ],
     id: 1,
   },
@@ -143,7 +144,6 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
     id: 8,
-
   },
 ];
 const drivers = [
