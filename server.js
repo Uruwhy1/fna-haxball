@@ -44,6 +44,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 1,
   },
   {
     name: "Imola Grand Prix",
@@ -57,6 +58,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 2,
   },
   {
     name: "Belgian Grand Prix",
@@ -70,6 +72,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 3,
   },
   {
     name: "Monaco Grand Prix",
@@ -83,6 +86,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 4,
   },
   {
     name: "Japanese Grand Prix",
@@ -96,6 +100,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 5,
   },
   {
     name: "Brazilian Grand Prix",
@@ -109,6 +114,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 6,
   },
   {
     name: "British Grand Prix",
@@ -122,6 +128,7 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 7,
   },
   {
     name: "Australian Grand Prix",
@@ -135,6 +142,8 @@ const races = [
       { driver: "Uruwhy", laptime: "35.324s" },
       { driver: "Uruwhy", laptime: "35.324s" },
     ],
+    id: 8,
+
   },
 ];
 const drivers = [
@@ -185,9 +194,15 @@ app.get("/login", (req, res) => {
 app.get("/news", (req, res) => {
   res.render("news", { title: "Noticias", posts: posts });
 });
+
 app.get("/tracks", (req, res) => {
   res.render("tracks", { title: "Carreras", races: races });
 });
+app.get("/tracks/:id", (req, res) => {
+  const race = races.find((r) => r.id === parseInt(req.params.id));
+  res.render("individualTrack", { title: "Carreras", race: race });
+});
+
 app.get("/drivers", (req, res) => {
   res.render("drivers", { title: "Pilotos", drivers: drivers });
 });

@@ -2,20 +2,23 @@
 
 <div class="races-container">
   <% races.forEach(race => { %>
-  <div class="race">
-    <!-- <img src="<% race.name %>-image" alt="" /> -->
-    <img
-      src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png"
-      alt=""
-    />
-    <h1><%= race.name %></h1>
 
-    <% race.positions.forEach(driver => {%>
-    <div class="driver">
-      <p class="name"><%= driver.driver %></p>
-      <p class="points"><%= driver.laptime %></p>
+  <a href="/tracks/<%= race.id %>">
+    <div class="race">
+      <!-- <img src="<% race.name %>-image" alt="" /> -->
+      <img
+        src="https://www.formula1.com/content/dam/fom-website/2018-redesign-assets/Circuit%20maps%2016x9/Bahrain_Circuit.png"
+        alt=""
+      />
+      <h1><%= race.name %></h1>
+
+      <% race.positions.forEach(driver => {%>
+      <div class="driver">
+        <p class="name"><%= driver.driver %></p>
+        <p class="points"><%= driver.laptime %></p>
+      </div>
+      <% })%>
     </div>
-    <% })%>
-  </div>
+  </a>
   <% }); %>
 </div>

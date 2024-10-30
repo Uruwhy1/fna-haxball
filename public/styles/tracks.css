@@ -18,6 +18,10 @@ main {
   gap: 4rem;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 375px);
+
+  > a {
+    text-decoration: none;
+  }
 }
 
 .race {
