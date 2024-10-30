@@ -7,7 +7,7 @@
     id="cardContainer"
     style="transform: translateX(0)"
   >
-    <% posts.forEach((post) => { %>
+    <% posts.slice(0, 3).forEach((post) => { %>
     <div class="main-card" style="background-image: url('<%= post.image %>')">
       <h1 class="title"><%= post.title %></h1>
       <div class="info">
