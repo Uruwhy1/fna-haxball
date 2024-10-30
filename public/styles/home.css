@@ -70,10 +70,11 @@ main .container {
   display: flex;
   gap: 1rem;
 
-  button {
+  a {
     padding: 0.75rem 0;
     width: 350px;
 
+    text-decoration: none;
     color: inherit;
     font-weight: 500;
 

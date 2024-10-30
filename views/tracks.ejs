@@ -12,7 +12,7 @@
       />
       <h1><%= race.name %></h1>
 
-      <% race.positions.forEach(driver => {%>
+      <% race.positions.slice(0,3).forEach(driver => {%>
       <div class="driver">
         <p class="name"><%= driver.driver %></p>
         <p class="points"><%= driver.laptime %></p>

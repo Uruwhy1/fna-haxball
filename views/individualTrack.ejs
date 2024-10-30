@@ -13,7 +13,7 @@
 <div class="right">
   <div class="positions">
     <h2>Vueltas Rapidas</h2>
-    <% race.positions.forEach(driver => { %>
+    <% race.positions.slice(0, 10).forEach(driver => { %>
     <div class="driver">
       <p class="name"><%= driver.driver %></p>
       <p class="points"><%= driver.laptime %></p>
