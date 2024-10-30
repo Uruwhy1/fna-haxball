@@ -82,7 +82,7 @@ La **FIA** ha anunciado que está investigando las acusaciones y que se tomarán
 
 Esta controversia pone de relieve la necesidad de abordar el racismo y la intolerancia en el deporte. A medida que la situación se desarrolla, tanto Ricciardelli como Shiryu están en el centro de una discusión que podría tener repercusiones duraderas en sus carreras y en el automovilismo en general.`,
     image:
-      "https://fotografias.lasexta.com/clipping/cmsimages01/2023/11/03/813940F0-4C23-4561-9F76-A60BCAA8E001/fernando-alonso-brasil_98.jpg?crop=5272,2966,x0,y0&width=1900&height=1069&optimize=low&format=webply",
+      "https://e0.365dm.com/20/09/2048x1152/skysports-lewis-hamilton-mercedes_5097251.jpg?20200915112218",
   },
   {
     id: 5,
