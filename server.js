@@ -88,7 +88,7 @@ Esta controversia pone de relieve la necesidad de abordar el racismo y la intole
     id: 5,
     date: new Date(),
     author: "Vinicius Jr",
-    title: "Fuerte altercado entre Kev1 y Hax en los entrenamientos libres",
+    title: "Amor en la Pista: Chimichan y Mou Revelan su Relación",
     content: `Durante los entrenamientos libres de este fin de semana, se produjo un fuerte altercado entre **Kev1**, el piloto argentino, y **Hax**, el veloz competidor húngaro. La tensión que ya se había acumulado entre ambos a lo largo de la temporada estalló en el circuito, lo que dejó a los aficionados y miembros del equipo atónitos.
 
 ## El incidente
@@ -108,7 +108,8 @@ Los directores de equipo de ambos pilotos han declarado que están investigando 
 ## Conclusión
 
 Este incidente ha puesto de relieve la creciente rivalidad entre Kev1 y Hax, y muchos se preguntan cómo afectará esto a sus actuaciones en las próximas carreras. Mientras tanto, los aficionados continúan debatiendo sobre el incidente en las redes sociales, mostrando un interés renovado por la dinámica entre estos dos talentosos pilotos. `,
-    image: "https://i.ytimg.com/vi/dDf1C2bV_1Y/maxresdefault.jpg",
+    image:
+      "https://media.wired.com/photos/59322e114dc9b45ccec5c73b/master/pass/P-20150424-00966_HiRes-JPEG-24bit-RGB.jpg",
   },
 ];
 const races = [
